@@ -119,37 +119,40 @@ We envision a multi-stage pipeline, with distinct components for sequence genera
 
 ## Libraries:
 
-Python: The standard for this project.
+1) Python: The standard for this project.
 
-Hugging Face Transformers: For easy access to PLMs.
+2) Hugging Face Transformers: For easy access to PLMs.
 
-PyTorch / TensorFlow / Keras: For building and training your neural networks.
+3) PyTorch / TensorFlow / Keras: For building and training your neural networks.
 
-Biopython: For parsing FASTA files and general sequence manipulation.
+4) Biopython: For parsing FASTA files and general sequence manipulation.
 
-Pandas / NumPy: For data handling and numerical operations.
+5) Pandas / NumPy: For data handling and numerical operations.
 
-DIAMOND: Install and use the command-line tool for ground truth generation.
+6) DIAMOND: Install and use the command-line tool for ground truth generation.
 
-Scalability: Think about efficient data loading, batch processing, and potential parallelization for both ground truth generation and metadata inference. Cloud computing resources can be very beneficial for large-scale training data generation.
+## Tips
+* Scalability: Think about efficient data loading, batch processing, and potential parallelization for both ground truth generation and metadata inference. Cloud computing resources can be very beneficial for large-scale training data generation.
 
-Text Generation for Descriptions: Generating coherent and biologically accurate protein descriptions from embeddings is a challenging NLP task. Start simple and iterate. You might need to experiment with different decoder architectures or even fine-tune a small general-purpose LLM on protein descriptions.
+* Text Generation for Descriptions: Generating coherent and biologically accurate protein descriptions from embeddings is a challenging NLP task. Start simple and iterate. You might need to experiment with different decoder architectures or even fine-tune a small general-purpose LLM on protein descriptions.
 
-Taxonomy: Use NCBI Taxonomy IDs for organisms to ensure consistency and hierarchical understanding.
+* Taxonomy: Use NCBI Taxonomy IDs for organisms to ensure consistency and hierarchical understanding.
 
-Evaluation: Carefully define how you will evaluate the "plausibility" and "accuracy" of your generated metadata, especially for the text-based descriptions and numerical BLAST metrics.
+* Evaluation: Carefully define how you will evaluate the "plausibility" and "accuracy" of your generated metadata, especially for the text-based descriptions and numerical BLAST metrics.
 
-Getting Started
+## Getting Started
 Clone this repository:
 
+```
 git clone https://github.com/MartinAmiens/DualSeqNet.git
 cd DualSeqNet
+```
 
 Set up your environment: Create a virtual environment and install necessary libraries.
 
 Start coding! Begin by exploring existing PLMs and planning your data collection strategy.
 
-Contribution & Community
-This is an open challenge, and we encourage collaboration and diverse approaches. Feel free to open issues for questions, discuss ideas, and submit your solutions!
+## Contribution & Community
+This is an open project, and I encourage collaboration and diverse approaches. Feel free to open issues for questions, discuss ideas, and submit your solutions!
 
 Good luck, and happy coding!
