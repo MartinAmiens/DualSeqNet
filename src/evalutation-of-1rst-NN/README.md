@@ -1,33 +1,33 @@
-Pour évaluer la génération d'une séquence d'acides aminés, il a été choisi de produire un score basé sur les critères et observtaion suivants:
+To assess the generation of an amino acid sequence, it was decided to produce a score based on the following criteria and observations:
 
-## La protéine est-elle fonctionnelle ?
+## Is the protein functional?
 
-1) Composition en Acides Aminés :
+1) Amino acid composition:
 
-Distribution Naturelle : Les 20 acides aminés ne sont pas également représentés dans les protéines naturelles. Certains (comme la Leucine, l'Alanine, la Glycine, la Sérine) sont très courants, tandis que d'autres (comme le Tryptophane, la Cystéine, l'Histidine) sont plus rares. Une séquence aléatoire aura souvent une distribution trop uniforme ou trop bizarre.
+Natural distribution: The 20 amino acids are not equally represented in natural proteins. Some (such as Leucine, Alanine, Glycine, Serine) are very common, while others (such as Tryptophan, Cysteine, Histidine) are rarer. A random sequence will often have a distribution that is too uniform or too bizarre.
 
-2) Présence d'Acides Aminés Clés :
+2) Presence of Key Amino Acids :
 
-* Cystéine (C) : Essentielle pour les ponts disulfures qui stabilisent de nombreuses structures 3D. Une absence totale ou une présence isolée rendrait la formation de ces ponts impossible.
+* Cysteine (C): Essential for the disulphide bridges that stabilise many 3D structures. A total absence or isolated presence would make the formation of these bridges impossible.
 
-* Proline (P) et Glycine (G) : La Proline introduit des coudes rigides, la Glycine apporte une flexibilité extrême. Leur placement est crucial. Une séquence aléatoire les placera n'importe où, rendant le repliement difficile.
+* Proline (P) and Glycine (G): Proline introduces rigid bends, while Glycine provides extreme flexibility. Their placement is crucial. A random sequence will place them anywhere, making folding difficult.
 
-3) Balance Hydrophobe/Hydrophile :
+3) Hydrophobic/Hydrophilic balance:
 
-Les protéines globulaires (la plupart des protéines fonctionnelles) ont généralement un cœur hydrophobe (acides aminés "qui n'aiment pas l'eau") et une surface hydrophile (qui "aiment l'eau"). Une séquence aléatoire aura souvent des blocs de résidus hydrophobes en surface, ou un mélange chaotique, favorisant l'agrégation plutôt que le repliement correct.
+Globular proteins (most functional proteins) generally have a hydrophobic core (amino acids that ‘don't like water’) and a hydrophilic surface (that ‘like water’). A random sequence will often have blocks of hydrophobic residues on the surface, or a chaotic mixture, favouring aggregation rather than correct folding.
 
-4) Absence de Répétitions Extrêmes et Simples :
+4) Absence of Extreme and Simple Repeats :
 
-Les séquences hautement répétitives comme AAAAA (poly-alanine) ou PLPLPL sont rares dans les protéines globulaires fonctionnelles. Elles sont plutôt caractéristiques de régions de faible complexité ou de protéines structurales fibreuses. Une séquence aléatoire pure est susceptible de contenir de longues répétitions par pur hasard, ce qui est un signe d'une mauvaise "conception" protéique pour une fonction classique.
+Highly repetitive sequences such as AAAAA (poly-alanine) or PLPLPL are rare in functional globular proteins. They are more characteristic of regions of low complexity or fibrous structural proteins. A pure random sequence is likely to contain long repeats by pure chance, which is a sign of poor protein ‘design’ for a classical function.
 
-5) Potentiel d'Agrégation Faible :
+5) Low Aggregation Potential:
 
-De nombreuses séquences aléatoires contiennent des "patches" (zones) d'acides aminés très hydrophobes ou avec des charges non compensées qui, une fois exposées à l'eau, ont tendance à s'agglutiner avec d'autres protéines, formant des agrégats insolubles (comme du "grumeau"). Une "bonne" protéine a évolué pour éviter ou masquer ces zones.
+Many random sequences contain “patches” of highly hydrophobic amino acids or amino acids with uncompensated charges which, when exposed to water, tend to clump together with other proteins, forming insoluble aggregates (like “lumps”). A “good” protein has evolved to avoid or mask these areas.
 
-6) Propension à la Structure Secondaire :
+6) Propensity for Secondary Structure :
 
-Les acides aminés ont des préférences pour former des hélices alpha, des feuillets bêta ou des boucles. Une "bonne" séquence protéique a des régions avec une propension forte et cohérente à former ces structures, qui sont les "briques" du repliement 3D. Une séquence aléatoire aura une propension très hétérogène et chaotique, rendant la formation d'une structure stable improbable.
+Amino acids have preferences for forming alpha helices, beta sheets or loops. A ‘good’ protein sequence has regions with a strong and consistent propensity to form these structures, which are the ‘building blocks’ of 3D folding. A random sequence will have a very heterogeneous and chaotic propensity, making the formation of a stable structure unlikely.
 
-7) Absence de Codons Stop Internes (si issue d'une traduction complète) :
+7) Absence of Internal Stop Codons (if from a complete translation) :
 
-Si tu génères la séquence à partir d'un ADN, elle doit commencer par une Méthionine (M) et ne doit pas contenir de codons stop internes (TAA, TAG, TGA) qui arrêteraient la traduction prématurément.
+If you generate the sequence from DNA, it must start with a methionine (M) and must not contain any internal stop codons (TAA, TAG, TGA) that would stop translation prematurely.
